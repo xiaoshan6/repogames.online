@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Wars - RepoGames</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game-detail.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/686/686589.png" type="image/png">
+    <link rel="canonical" href="https://repogames.online/game-snakewars.html" />
+</head>
+<body class="game-detail-page">
+    <header>
+        <div class="logo">
+            <a href="index.html"><h1>RepoGames</h1></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#action">Action</a></li>
+                <li><a href="index.html#puzzle">Puzzle</a></li>
+                <li><a href="index.html#strategy">Strategy</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="game-detail">
+            <h1 id="game-title">Snake Wars</h1>
+            
+            <div class="game-iframe-container">
+                <div class="iframe-controls">
+                    <button id="fullscreen-btn">Fullscreen</button>
+                </div>
+                <div class="game-iframe-wrapper">
+                    <iframe id="game-iframe" src="https://www.onlinegames.io/games/2024/unity/snake-wars/index.html" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="game-info">
+                <div class="game-description">
+                    <h2>Game Description</h2>
+                    <p id="game-description-text">Snake Wars is an exciting multiplayer game where you control a snake and compete against other players. Grow your snake by eating food and avoid crashing into other snakes!</p>
+                </div>
+                
+                <div class="game-how-to-play">
+                    <h2>How to Play</h2>
+                    <p id="game-how-to-play-text">Use the arrow keys to control your snake. Eat food to grow longer and avoid colliding with other snakes. The last snake standing wins!</p>
+                </div>
+            </div>
+            
+            <div class="related-games">
+                <h2>Related Games</h2>
+                <div class="games-grid small-grid">
+                    <div class="game-card">
+                        <a href="game-football.html" style="display: block; text-decoration: none; color: inherit;">
+                            <div class="game-thumbnail">
+                                <img src="images/covers/football-cover.jpg" alt="Football King">
+                            </div>
+                            <h3>Football King</h3>
+                            <p>Exciting soccer game</p>
+                        </a>
+                    </div>
+                    <div class="game-card">
+                        <a href="game-stickguys.html" style="display: block; text-decoration: none; color: inherit;">
+                            <div class="game-thumbnail">
+                                <img src="images/covers/stickguys-cover.jpg" alt="Stick Guys Defense">
+                            </div>
+                            <h3>Stick Guys Defense</h3>
+                            <p>Tower defense with stick figures</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div> <!-- 用于加载底部内容 -->
+
+    <script src="js/game-detail.js"></script>
+    <script src="js/backtotop.js"></script>
+    <script>
+        // 使用 fetch API 加载底部内容
+        fetch('bottom.html') // 确保路径正确
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    </script>
+</body>
+</html> 
