@@ -1,0 +1,157 @@
+/* 苹果经典色系 */
+:root {
+    --apple-blue: #007AFF;
+    --apple-green: #34C759;
+    --apple-indigo: #5856D6;
+    --apple-orange: #FF9500;
+    --apple-pink: #FF2D55;
+    --apple-purple: #AF52DE;
+    --apple-red: #FF3B30;
+    --apple-teal: #5AC8FA;
+    --apple-yellow: #FFCC00;
+    --apple-gray1: #8E8E93;
+    --apple-gray2: #AEAEB2;
+    --apple-gray3: #C7C7CC;
+    --apple-gray4: #D1D1D6;
+    --apple-gray5: #E5E5EA;
+    --apple-gray6: #F2F2F7;
+    --apple-background: #F5F5F7;
+    --apple-dark-background: #1D1D1F;
+    --apple-text: #1D1D1F;
+    --apple-dark-text: #F5F5F7;
+}
+
+body.game-detail-page {
+    background-color: var(--apple-background);
+    color: var(--apple-text);
+    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.game-detail {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.game-detail h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: var(--apple-text);
+}
+
+.game-iframe-container {
+    margin-bottom: 2rem;
+    background-color: var(--apple-gray6);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.iframe-controls {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    background-color: var(--apple-gray5);
+}
+
+#fullscreen-btn {
+    background-color: var(--apple-blue);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#fullscreen-btn:hover {
+    background-color: #0062cc;
+}
+
+.game-iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+#game-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.game-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.game-description, .game-how-to-play {
+    background-color: var(--apple-gray6);
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.game-description h2, .game-how-to-play h2, .related-games h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--apple-text);
+    font-weight: 600;
+}
+
+.related-games {
+    margin-top: 2rem;
+}
+
+.small-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+/* 游戏卡片标题样式 */
+.small-grid .game-card h3 {
+    height: 1.5em; /* 单行高度 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* 强制单行显示 */
+    margin-bottom: 0.3rem;
+}
+
+/* 游戏卡片描述样式 */
+.small-grid .game-card p {
+    height: 1.5em; /* 单行高度 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* 强制单行显示 */
+    margin-bottom: 0.8rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .game-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .game-detail h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-detail {
+        padding: 1rem;
+    }
+    
+    .game-detail h1 {
+        font-size: 1.8rem;
+    }
+} 

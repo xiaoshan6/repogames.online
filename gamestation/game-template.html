@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Title - Gaming Haven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/game-detail.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/686/686589.png" type="image/png">
+    <link rel="canonical" href="https://gaminghaven.example.com/game.html" />
+</head>
+<body class="game-detail-page">
+    <header>
+        <div class="logo">
+            <h1>Gaming Haven</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#action">Action</a></li>
+                <li><a href="index.html#puzzle">Puzzle</a></li>
+                <li><a href="index.html#strategy">Strategy</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="game-detail">
+            <h1 id="game-title">Game Title</h1>
+            
+            <div class="game-iframe-container">
+                <div class="iframe-controls">
+                    <button id="fullscreen-btn">Fullscreen</button>
+                </div>
+                <div class="game-iframe-wrapper">
+                    <iframe id="game-iframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="game-info">
+                <div class="game-description">
+                    <h2>Game Description</h2>
+                    <p id="game-description-text">This is a fun and exciting game where you can challenge your skills and enjoy amazing gameplay.</p>
+                </div>
+                
+                <div class="game-how-to-play">
+                    <h2>How to Play</h2>
+                    <p id="game-how-to-play-text">Use the arrow keys to move, spacebar to jump, and collect items along the way. Avoid obstacles and reach the goal to win!</p>
+                </div>
+            </div>
+            
+            <div class="related-games">
+                <h2>Related Games</h2>
+                <div class="games-grid small-grid">
+                    <!-- Related games will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Gaming Haven. All rights reserved.</p>
+    </footer>
+
+    <script src="js/game-detail.js"></script>
+</body>
+</html> 
