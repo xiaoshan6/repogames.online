@@ -16,9 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             gameIframe.msRequestFullscreen();
         }
     });
-});
 
-<script>
     // 使用 fetch API 加载底部内容
     fetch('bottom.html') // 确保路径正确
         .then(response => {
@@ -33,4 +31,4 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
         });
-</script> 
+}); 
