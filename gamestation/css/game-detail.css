@@ -116,22 +116,28 @@ body.game-detail-page {
     gap: 1.5rem;
 }
 
-/* 游戏卡片标题样式 */
-.small-grid .game-card h3 {
-    height: 1.5em; /* 单行高度 */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; /* 强制单行显示 */
-    margin-bottom: 0.3rem;
+/* 游戏卡片样式 */
+.small-grid .game-card {
+    position: relative; /* 使得子元素可以绝对定位 */
+    overflow: hidden; /* 确保内容不溢出 */
 }
 
-/* 游戏卡片描述样式 */
-.small-grid .game-card p {
-    height: 1.5em; /* 单行高度 */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; /* 强制单行显示 */
-    margin-bottom: 0.8rem;
+/* 默认隐藏标题 */
+.small-grid .game-card h3 {
+    display: none; /* 默认隐藏标题 */
+    position: absolute; /* 绝对定位 */
+    bottom: 10px; /* 距离底部10px */
+    left: 10px; /* 距离左侧10px */
+    color: white; /* 白色字体 */
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
+    padding: 5px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+    transition: opacity 0.3s ease; /* 过渡效果 */
+}
+
+/* 鼠标移入时显示标题 */
+.small-grid .game-card:hover h3 {
+    display: block; /* 鼠标移入时显示标题 */
 }
 
 /* 响应式设计 */
@@ -154,4 +160,29 @@ body.game-detail-page {
     .game-detail h1 {
         font-size: 1.8rem;
     }
+}
+
+.small-grid .game-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.small-grid .game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.small-grid .game-card .play-btn {
+    display: inline-block;
+    background-color: var(--apple-blue);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.small-grid .game-card:hover .play-btn {
+    background-color: #0062cc;
 } 

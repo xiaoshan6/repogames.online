@@ -54,31 +54,47 @@
                 <h2>Related Games</h2>
                 <div class="games-grid small-grid">
                     <div class="game-card">
-                        <div class="game-thumbnail">
-                            <img src="images/covers/dinosaur-cover.jpg" alt="Dinosaur Game">
-                        </div>
-                        <h3>Dinosaur Game</h3>
-                        <p>Classic dinosaur adventure</p>
-                        <a href="game-dinosaur.html" class="play-btn">Play Game</a>
+                        <a href="game-stickguys.html" style="display: block; text-decoration: none; color: inherit;">
+                            <div class="game-thumbnail">
+                                <img src="images/covers/stickguys-cover.jpg" alt="Stick Guys Defense">
+                            </div>
+                            <h3>Stick Guys Defense</h3>
+                            <p>Tower defense with stick figures</p>
+                        </a>
                     </div>
                     <div class="game-card">
-                        <div class="game-thumbnail">
-                            <img src="images/covers/stickguys-cover.jpg" alt="Stick Guys Defense">
-                        </div>
-                        <h3>Stick Guys Defense</h3>
-                        <p>Fun stick figure tower defense</p>
-                        <a href="game-stickguys.html" class="play-btn">Play Game</a>
+                        <a href="game-football.html" style="display: block; text-decoration: none; color: inherit;">
+                            <div class="game-thumbnail">
+                                <img src="images/covers/football-cover.jpg" alt="Football King">
+                            </div>
+                            <h3>Football King</h3>
+                            <p>Exciting soccer game</p>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 RepoGames. All rights reserved.</p>
-    </footer>
+    <div id="footer-container"></div>
 
     <script src="js/game-detail.js"></script>
     <script src="js/backtotop.js"></script>
+    <script>
+        // 使用 fetch API 加载底部内容
+        fetch('bottom.html') // 确保路径正确
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    </script>
 </body>
 </html> 
